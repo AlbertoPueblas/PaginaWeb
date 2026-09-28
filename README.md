@@ -1,39 +1,34 @@
 # 🎮 Página Web de Videojuegos
 
-Página web dedicada al mundo de los videojuegos, desarrollada como proyecto web utilizando **HTML5 y CSS3**, con apoyo de **Bootstrap 5.3.8** para algunos elementos de diseño.
+Página web dedicada al mundo de los videojuegos, desarrollada utilizando **HTML5 y CSS3**, con apoyo de **Bootstrap 5.3.8**.
 
-El proyecto presenta diferentes videojuegos, información técnica de cada uno y páginas organizadas según la plataforma.
-
-🔗 Repositorio
+## 🔗 Repositorio
 
 El código fuente del proyecto está disponible en GitHub:
 
-AlbertoPueblas/PaginaWeb en GitHub
+[AlbertoPueblas/PaginaWeb en GitHub](https://github.com/AlbertoPueblas/PaginaWeb?utm_source=chatgpt.com)
 
 ## 📋 Descripción
 
-La página principal muestra una colección de videojuegos mediante tarjetas. Cada tarjeta incluye:
+La página presenta diferentes videojuegos mediante tarjetas interactivas. Cada tarjeta muestra una imagen y el nombre del videojuego, además de una ficha técnica con información adicional.
 
-- Imagen del videojuego.
-- Nombre del videojuego.
-- Ficha técnica.
+Entre la información mostrada se encuentra:
+
 - Fecha de lanzamiento.
 - Plataformas disponibles.
 - Tamaño aproximado.
 - Información sobre el multijugador.
 - Precio.
 
-La web también dispone de una barra de navegación desde la que se puede acceder a diferentes secciones.
-
 ## 🌐 Secciones
 
-La página está organizada en las siguientes secciones:
+La web está organizada en diferentes secciones:
 
 ### 🏠 Inicio
 
-Página principal del proyecto.
+Página principal donde se muestran los videojuegos mediante tarjetas.
 
-En ella se muestran diferentes videojuegos mediante tarjetas:
+Actualmente incluye:
 
 - Grand Theft Auto VI
 - Forza Horizon 6
@@ -43,46 +38,24 @@ En ella se muestran diferentes videojuegos mediante tarjetas:
 - Clair Obscur: Expedition 33
 - Forza Motorsport
 
-Las tarjetas muestran la imagen del juego y su información correspondiente.
-
 ### 🎮 Plataformas
 
-La web dispone de páginas específicas para diferentes plataformas:
+La página dispone de secciones específicas para:
 
-- **PlayStation**
+- **PlayStation 5**
 - **Xbox**
 - **PC**
 
-Estas secciones permiten organizar el contenido según la plataforma.
-
 ### 📰 Novedades
 
-Sección destinada a noticias y novedades relacionadas con el mundo de los videojuegos y las futuras generaciones de consolas.
-
-Actualmente incluye contenido relacionado con las próximas generaciones de hardware y la evolución de las consolas.
+Sección destinada a mostrar información sobre próximos lanzamientos y novedades relacionadas con el mundo de los videojuegos.
 
 ## 🛠️ Tecnologías utilizadas
 
-### HTML5
-
-Utilizado para crear la estructura y el contenido de las diferentes páginas.
-
-### CSS3
-
-Utilizado para:
-
-- Diseño de las tarjetas.
-- Colores.
-- Fondos.
-- Distribución de los elementos.
-- Bordes y formas.
-- Efectos al pasar el cursor.
-- Posicionamiento de elementos.
-- Diseño de las diferentes secciones.
-
-### Bootstrap 5.3.8
-
-Se utiliza principalmente para algunos componentes y estilos de la interfaz, especialmente los botones y elementos de navegación.
+- **HTML5** — estructura y contenido.
+- **CSS3** — diseño y estilos.
+- **Bootstrap 5.3.8** — componentes y estilos adicionales.
+- **Git / GitHub** — control de versiones y almacenamiento del proyecto.
 
 ## 📁 Estructura del proyecto
 
@@ -96,21 +69,7 @@ PaginaWeb/
 │   │   └── index.css
 │   │
 │   ├── img/
-│   │   ├── bf.webp
-│   │   ├── dune.jpg
-│   │   ├── expedition.avif
-│   │   ├── favicon.png
-│   │   ├── Fondo.png
-│   │   ├── ForzaHorizon6.jpg
-│   │   ├── forzaMotorsport.jpg
-│   │   ├── gtaVI.jpg
-│   │   ├── LogoA.png
-│   │   ├── pc.jpg
-│   │   ├── ps5.jpg
-│   │   ├── ps5.png
-│   │   ├── resonance.webp
-│   │   ├── xbox25.jpg
-│   │   └── xboxXxX.jpg
+│   │   └── Imágenes utilizadas en la web
 │   │
 │   └── juegos/
 │       ├── proximos.html
@@ -125,17 +84,9 @@ PaginaWeb/
 
 ## 🎨 Diseño
 
-La página utiliza un fondo personalizado y un sistema de tarjetas para presentar los videojuegos.
+La página utiliza un diseño basado en tarjetas para presentar los videojuegos.
 
-Las tarjetas tienen un tamaño fijo y utilizan imágenes adaptadas mediante:
-
-```css
-object-fit: cover;
-```
-
-Esto permite mantener las proporciones de las tarjetas aunque las imágenes originales tengan diferentes dimensiones.
-
-La distribución de las tarjetas se realiza mediante **Flexbox**:
+Las tarjetas se organizan mediante **Flexbox**, permitiendo que se adapten al espacio disponible:
 
 ```css
 .contenedor {
@@ -146,31 +97,27 @@ La distribución de las tarjetas se realiza mediante **Flexbox**:
 }
 ```
 
-De esta forma, las tarjetas se reorganizan automáticamente cuando cambia el tamaño de la pantalla.
-
-## 🃏 Fichas técnicas
-
-Las tarjetas incorporan información adicional sobre cada videojuego.
-
-Mediante CSS se puede mostrar una ficha técnica al interactuar con la tarjeta:
+Las imágenes utilizan `object-fit: cover` para mantener una presentación uniforme:
 
 ```css
-.carta:hover span {
-    display: block;
+.carta img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
 }
 ```
 
-La información se coloca sobre la tarjeta utilizando posicionamiento absoluto:
+## 🃏 Fichas técnicas
 
-```css
-position: absolute;
-```
+Cada tarjeta puede mostrar información adicional mediante una ficha técnica.
 
-Esto permite mantener las dimensiones de la tarjeta y mostrar la información sin desplazar los demás elementos.
+La ficha se posiciona sobre la tarjeta utilizando `position: absolute`, evitando que el contenido desplace las demás tarjetas.
+
+Además, se utilizan pseudoclases CSS para crear la interacción con las tarjetas.
 
 ## 🧭 Navegación
 
-La navegación principal permite acceder rápidamente a:
+La barra de navegación permite acceder a las principales secciones:
 
 ```text
 Inicio
@@ -181,37 +128,27 @@ Inicio
 └── Novedades
 ```
 
-Todas las páginas comparten la hoja de estilos principal para mantener una apariencia común.
-
 ## 🚀 Cómo ejecutar el proyecto
 
-No es necesario instalar ningún servidor ni dependencia.
+No es necesario instalar ninguna dependencia.
 
-### 1. Descargar o clonar el repositorio
+### Opción 1 — Abrir directamente
 
-```bash
-git clone <URL_DEL_REPOSITORIO>
-```
-
-### 2. Abrir el proyecto
-
-Entrar en la carpeta:
+Abrir el archivo:
 
 ```text
-PaginaWeb/Inicio/
+Inicio/index.html
 ```
 
-### 3. Abrir `index.html`
+con un navegador web.
 
-Se puede abrir directamente con cualquier navegador moderno.
+### Opción 2 — Visual Studio Code
 
-También se puede utilizar **Visual Studio Code** junto con la extensión **Live Server** para visualizar los cambios en tiempo real.
+Abrir el proyecto con Visual Studio Code y utilizar **Live Server** para visualizar la página y comprobar los cambios en tiempo real.
 
 ## 📌 Estado del proyecto
 
-El proyecto se encuentra en desarrollo.
-
-Actualmente incluye:
+El proyecto se encuentra actualmente en desarrollo.
 
 - [x] Página principal
 - [x] Barra de navegación
@@ -221,32 +158,40 @@ Actualmente incluye:
 - [x] Página de Xbox
 - [x] Página de PC
 - [x] Sección de novedades
-- [x] Diseño responsive mediante Flexbox
-- [x] Bootstrap
+- [x] Diseño mediante Flexbox
+- [x] Integración de Bootstrap
+- [x] Repositorio en GitHub
 - [ ] Ampliar catálogo de videojuegos
 - [ ] Añadir más información a las fichas
 - [ ] Mejorar la adaptación a dispositivos móviles
 - [ ] Añadir nuevas secciones
 
-## 📚 Objetivo del proyecto
+## 📚 Objetivo
 
-El objetivo del proyecto es poner en práctica los conocimientos adquiridos en desarrollo web mediante la creación de una página web temática sobre videojuegos.
+El objetivo del proyecto es poner en práctica los conocimientos de **desarrollo web** mediante la creación de una página temática sobre videojuegos.
 
-Se trabajan conceptos como:
+Durante el desarrollo se trabajan conceptos como:
 
 - Estructura HTML.
 - Selectores CSS.
 - Flexbox.
 - Posicionamiento.
-- Pseudoclases como `:hover`.
+- Pseudoclases.
 - Diseño de tarjetas.
 - Enlaces entre páginas.
 - Organización de archivos.
 - Uso de imágenes.
 - Integración de Bootstrap.
+- Control de versiones con Git y GitHub.
 
 ## 👨‍💻 Autor
 
 **Alberto Pueblas**
 
 Proyecto realizado como práctica de desarrollo web.
+
+---
+
+### 🔗 Enlace al proyecto
+
+[Visitar repositorio en GitHub](https://github.com/AlbertoPueblas/PaginaWeb?)
