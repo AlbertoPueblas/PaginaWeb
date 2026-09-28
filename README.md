@@ -4,6 +4,12 @@ Página web dedicada al mundo de los videojuegos, desarrollada como proyecto web
 
 El proyecto presenta diferentes videojuegos, información técnica de cada uno y páginas organizadas según la plataforma.
 
+🔗 Repositorio
+
+El código fuente del proyecto está disponible en GitHub:
+
+AlbertoPueblas/PaginaWeb en GitHub
+
 ## 📋 Descripción
 
 La página principal muestra una colección de videojuegos mediante tarjetas. Cada tarjeta incluye:
