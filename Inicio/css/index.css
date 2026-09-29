@@ -71,6 +71,18 @@ p {
   padding: 15px;
 }
 
+.card-body-ps {
+  background-color: #1876d4;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-body-xbox {
+  background-color: #119b02;
+  text-align: center;
+  padding: 15px;
+}
+
 .card-text {
   color: black;
 }
