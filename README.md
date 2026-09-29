@@ -1,32 +1,42 @@
 # 🎮 Página Web de Videojuegos
 
-Página web dedicada al mundo de los videojuegos, desarrollada utilizando **HTML5 y CSS3**, con apoyo de **Bootstrap 5.3.8**.
+Página web dedicada al mundo de los videojuegos, desarrollada como proyecto de desarrollo web utilizando **HTML5, CSS3 y Bootstrap 5**.
+
+El objetivo principal del proyecto es practicar la creación y organización de una página web, trabajando con tarjetas, navegación entre páginas, estilos CSS, imágenes, audio y control de versiones mediante Git y GitHub.
 
 ## 🔗 Repositorio
 
 El código fuente del proyecto está disponible en GitHub:
 
-[AlbertoPueblas/PaginaWeb en GitHub](https://github.com/AlbertoPueblas/PaginaWeb?utm_source=chatgpt.com)
+**[AlbertoPueblas/PaginaWeb](https://github.com/AlbertoPueblas/PaginaWeb)**
+
+---
 
 ## 📋 Descripción
 
-La página presenta diferentes videojuegos mediante tarjetas interactivas. Cada tarjeta muestra una imagen y el nombre del videojuego, además de una ficha técnica con información adicional.
+La página web muestra diferentes videojuegos mediante tarjetas interactivas.
 
-Entre la información mostrada se encuentra:
+Cada tarjeta contiene:
 
-- Fecha de lanzamiento.
-- Plataformas disponibles.
-- Tamaño aproximado.
-- Información sobre el multijugador.
-- Precio.
+- 🖼️ Imagen del videojuego.
+- 🎮 Nombre del juego.
+- 📅 Fecha de lanzamiento.
+- 💻 Plataformas disponibles.
+- 💾 Tamaño aproximado.
+- 👥 Información sobre el multijugador.
+- 💰 Precio.
+- ▶️ Enlace al tráiler cuando está disponible.
+- 📄 Ficha técnica que aparece mediante interacción con la tarjeta.
+
+La página también dispone de una barra de navegación que permite acceder a las diferentes categorías y de un reproductor de audio integrado.
+
+---
 
 ## 🌐 Secciones
 
-La web está organizada en diferentes secciones:
-
 ### 🏠 Inicio
 
-Página principal donde se muestran los videojuegos mediante tarjetas.
+Página principal donde se muestran diferentes videojuegos mediante tarjetas.
 
 Actualmente incluye:
 
@@ -40,7 +50,7 @@ Actualmente incluye:
 
 ### 🎮 Plataformas
 
-La página dispone de secciones específicas para:
+La web dispone de páginas específicas para diferentes plataformas:
 
 - **PlayStation 5**
 - **Xbox**
@@ -48,45 +58,49 @@ La página dispone de secciones específicas para:
 
 ### 📰 Novedades
 
-Sección destinada a mostrar información sobre próximos lanzamientos y novedades relacionadas con el mundo de los videojuegos.
+Sección dedicada a próximos lanzamientos y novedades relacionadas con videojuegos.
 
-## 🛠️ Tecnologías utilizadas
+---
 
-- **HTML5** — estructura y contenido.
-- **CSS3** — diseño y estilos.
-- **Bootstrap 5.3.8** — componentes y estilos adicionales.
-- **Git / GitHub** — control de versiones y almacenamiento del proyecto.
+## 🎵 Audio
 
-## 📁 Estructura del proyecto
+La página incluye un reproductor de audio integrado en la barra de navegación.
 
-```text
-PaginaWeb/
-│
-├── Inicio/
-│   ├── index.html
-│   │
-│   ├── css/
-│   │   └── index.css
-│   │
-│   ├── img/
-│   │   └── Imágenes utilizadas en la web
-│   │
-│   └── juegos/
-│       ├── proximos.html
-│       │
-│       └── plataformas/
-│           ├── pc.html
-│           ├── playstation.html
-│           └── xbox.html
-│
-└── README.md
+El usuario puede:
+
+- ▶️ Reproducir el audio.
+- ⏸️ Pausarlo.
+- 🔊 Controlar el volumen.
+- 🔁 Reproducirlo en bucle.
+- ⬇️ Descargar el archivo de audio.
+
+El navegador puede bloquear la reproducción automática con sonido debido a las políticas de reproducción automática de los navegadores.
+
+---
+
+## 🃏 Tarjetas interactivas
+
+Las tarjetas utilizan **CSS** para crear efectos de interacción.
+
+Al interactuar con una tarjeta, se muestra una ficha técnica con información adicional del videojuego.
+
+Para conseguir este efecto se utilizan propiedades como:
+
+```css
+position: absolute;
+overflow: hidden;
+border-radius: 25px;
 ```
+
+Además, se utilizan pseudoclases como `:hover` para modificar el aspecto de las tarjetas durante la interacción.
+
+---
 
 ## 🎨 Diseño
 
-La página utiliza un diseño basado en tarjetas para presentar los videojuegos.
+El diseño de la página está basado principalmente en **Flexbox**, permitiendo distribuir las tarjetas y adaptarlas al espacio disponible.
 
-Las tarjetas se organizan mediante **Flexbox**, permitiendo que se adapten al espacio disponible:
+Ejemplo:
 
 ```css
 .contenedor {
@@ -97,7 +111,7 @@ Las tarjetas se organizan mediante **Flexbox**, permitiendo que se adapten al es
 }
 ```
 
-Las imágenes utilizan `object-fit: cover` para mantener una presentación uniforme:
+Las imágenes de los videojuegos utilizan `object-fit: cover` para mantener una presentación uniforme:
 
 ```css
 .carta img {
@@ -107,17 +121,13 @@ Las imágenes utilizan `object-fit: cover` para mantener una presentación unifo
 }
 ```
 
-## 🃏 Fichas técnicas
+Las tarjetas también utilizan bordes redondeados y diferentes estilos para mejorar la presentación visual.
 
-Cada tarjeta puede mostrar información adicional mediante una ficha técnica.
-
-La ficha se posiciona sobre la tarjeta utilizando `position: absolute`, evitando que el contenido desplace las demás tarjetas.
-
-Además, se utilizan pseudoclases CSS para crear la interacción con las tarjetas.
+---
 
 ## 🧭 Navegación
 
-La barra de navegación permite acceder a las principales secciones:
+La barra de navegación permite acceder a las principales secciones de la web:
 
 ```text
 Inicio
@@ -128,9 +138,57 @@ Inicio
 └── Novedades
 ```
 
+---
+
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología | Uso |
+|---|---|
+| **HTML5** | Estructura y contenido de las páginas |
+| **CSS3** | Diseño, estilos y efectos visuales |
+| **Bootstrap 5.3.8** | Componentes y estilos adicionales |
+| **Git** | Control de versiones |
+| **GitHub** | Almacenamiento y gestión del repositorio |
+
+---
+
+## 📁 Estructura del proyecto
+
+```text
+PaginaWeb/
+│
+├── Inicio/
+│   │
+│   ├── index.html
+│   │
+│   ├── audio/
+│   │   └── WeLost-LorienTestard.mp3
+│   │
+│   ├── css/
+│   │   └── index.css
+│   │
+│   ├── img/
+│   │   ├── Imágenes de los videojuegos
+│   │   ├── Imágenes de las plataformas
+│   │   └── Recursos gráficos
+│   │
+│   └── juegos/
+│       │
+│       ├── proximos.html
+│       │
+│       └── plataformas/
+│           ├── pc.html
+│           ├── playstation.html
+│           └── xbox.html
+│
+└── README.md
+```
+
+---
+
 ## 🚀 Cómo ejecutar el proyecto
 
-No es necesario instalar ninguna dependencia.
+El proyecto no requiere instalar dependencias adicionales.
 
 ### Opción 1 — Abrir directamente
 
@@ -140,49 +198,86 @@ Abrir el archivo:
 Inicio/index.html
 ```
 
-con un navegador web.
+con cualquier navegador web compatible.
 
 ### Opción 2 — Visual Studio Code
 
-Abrir el proyecto con Visual Studio Code y utilizar **Live Server** para visualizar la página y comprobar los cambios en tiempo real.
+Abrir el proyecto con **Visual Studio Code** y utilizar una extensión como **Live Server** para ejecutar la página y visualizar los cambios en tiempo real.
+
+---
+
+## 🌿 Control de versiones
+
+El proyecto utiliza **Git** para controlar las diferentes versiones del código.
+
+Actualmente se utilizan ramas para organizar el desarrollo:
+
+```text
+master
+│
+└── dev
+```
+
+La rama `dev` se utiliza para realizar cambios y desarrollar nuevas funcionalidades antes de incorporarlas a la rama principal.
+
+El repositorio remoto está alojado en GitHub:
+
+**https://github.com/AlbertoPueblas/PaginaWeb**
+
+---
 
 ## 📌 Estado del proyecto
 
 El proyecto se encuentra actualmente en desarrollo.
 
+### Completado
+
 - [x] Página principal
 - [x] Barra de navegación
 - [x] Tarjetas de videojuegos
 - [x] Fichas técnicas
+- [x] Efectos `hover`
 - [x] Página de PlayStation
 - [x] Página de Xbox
 - [x] Página de PC
 - [x] Sección de novedades
 - [x] Diseño mediante Flexbox
 - [x] Integración de Bootstrap
+- [x] Reproductor de audio
+- [x] Descarga del archivo de audio
+- [x] Enlaces a tráileres
+- [x] Organización del proyecto
 - [x] Repositorio en GitHub
-- [ ] Ampliar catálogo de videojuegos
-- [ ] Añadir más información a las fichas
+- [x] Control de versiones mediante Git
+
+### Pendiente
+
+- [ ] Ampliar el catálogo de videojuegos
+- [ ] Añadir más información a las fichas técnicas
 - [ ] Mejorar la adaptación a dispositivos móviles
 - [ ] Añadir nuevas secciones
+- [ ] Mejorar algunos aspectos visuales y de navegación
 
-## 📚 Objetivo
+---
 
-El objetivo del proyecto es poner en práctica los conocimientos de **desarrollo web** mediante la creación de una página temática sobre videojuegos.
+## 📚 Objetivo del proyecto
 
-Durante el desarrollo se trabajan conceptos como:
+El objetivo del proyecto es poner en práctica los conocimientos adquiridos en **desarrollo web**, especialmente en:
 
-- Estructura HTML.
+- Estructura de documentos HTML.
 - Selectores CSS.
 - Flexbox.
-- Posicionamiento.
+- Posicionamiento de elementos.
 - Pseudoclases.
 - Diseño de tarjetas.
 - Enlaces entre páginas.
 - Organización de archivos.
-- Uso de imágenes.
+- Uso de imágenes y recursos multimedia.
 - Integración de Bootstrap.
-- Control de versiones con Git y GitHub.
+- Control de versiones con Git.
+- Trabajo con repositorios de GitHub.
+
+---
 
 ## 👨‍💻 Autor
 
@@ -192,6 +287,6 @@ Proyecto realizado como práctica de desarrollo web.
 
 ---
 
-### 🔗 Enlace al proyecto
+## 🔗 Enlaces
 
-[Visitar repositorio en GitHub](https://github.com/AlbertoPueblas/PaginaWeb?)
+- **Repositorio:** [github.com/AlbertoPueblas/PaginaWeb](https://github.com/AlbertoPueblas/PaginaWeb)
