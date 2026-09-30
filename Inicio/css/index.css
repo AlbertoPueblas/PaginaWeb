@@ -207,3 +207,7 @@ p {
   background-color: white;
   border-radius: 20px;
 }
+
+.sizeBoton {
+  scale: 200%;
+}
