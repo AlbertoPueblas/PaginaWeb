@@ -5,10 +5,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)),
-    url("../img/Fondo.png");
+
 }
 
 p {
@@ -131,6 +128,13 @@ p {
   background-color: #119b02;
   text-align: center;
   padding: 15px;
+}
+
+.card-body-pc {
+  background-color: #051e80;
+  text-align: center;
+  padding: 15px;
+  color: aliceblue;
 }
 
 .card-text {
